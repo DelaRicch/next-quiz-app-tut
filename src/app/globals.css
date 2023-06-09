@@ -2,26 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  background: #000925;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1,
+h2 {
+  @apply text-white;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h3 {
+  @apply pb-8 text-[#000105] text-[1.8rem];
+}
+
+button {
+  @apply py-4 px-2 w-full mt-3 text-base rounded-md cursor-pointer bg-[#808080] text-[#F8F8F8]
+}
+
+.btn-disabled {
+  @apply bg-zinc-400 cursor-not-allowed
+}
+
+li {
+  @apply list-none cursor-pointer my-2 mx-0 py-4 px-2 text-[#000105] border border-zinc-400
+}
+
+ .li-hover:hover {
+  @apply bg-[#D8D8D8] text-white
+} 
+
+.li-selected {
+  @apply text-white bg-[#000925]
+} 
+
+.container {
+  @apply max-w-[740px] w-full m-auto p-[1rem]
+}
+
+.quiz-container {
+  @apply bg-[#F8F8F8] p-[1rem] mt-[2rem] rounded-md
+}
+
+.container p {
+  @apply py-2 px-0
 }
